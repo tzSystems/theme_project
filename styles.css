@@ -10,6 +10,12 @@
     --btn-bg-color: #6200ea;
     --btn-text-color: #ffffff;
     --btn-hover-bg-color: #4a00c8;
+
+    /* Light theme */
+    --container-bg-color: #ffffff;
+    --article-bg-color: #ffffff;
+    --section-bg-color: #f9f9f9;
+    --section-text-color: #333;
 }
 
 .dark-theme {
@@ -23,8 +29,15 @@
     --btn-bg-color: #bb86fc;
     --btn-text-color: #121212;
     --btn-hover-bg-color: #9853e7;
+
+    /* Dark theme */
+    --container-bg-color: #1e1e1e;
+    --article-bg-color: #2c2c2c;
+    --section-bg-color: #333333;
+    --section-text-color: #e0e0e0;
 }
 
+/* Body */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -33,23 +46,63 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+/* Header Styles */
 header {
-    background-color: var(--accent-color);
+    background: linear-gradient(135deg, rgba(98, 0, 234, 0.8), rgba(98, 0, 234, 0.6)), url('/images/header-background.jpg');
+    background-size: cover;
+    background-position: center;
     color: var(--btn-text-color);
     padding: 1rem 0;
-    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle {
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
     font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-nav {
+#theme-toggle:hover {
+    background-color: var(--btn-hover-bg-color);
+    transform: scale(1.05);
+}
+
+/* Navbar Styles */
+.navbar {
+    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
     background-color: var(--nav-bg-color);
-    padding: 0.5rem 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-list {
@@ -64,26 +117,29 @@ nav {
     margin: 0 1rem;
 }
 
-.nav-list a {
+.nav-link {
     text-decoration: none;
     color: var(--nav-text-color);
     font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-list a:hover {
+.nav-link:hover {
     background-color: var(--nav-hover-bg-color);
     color: var(--nav-hover-text-color);
 }
 
+/* Container Styles */
 .container {
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: var(--container-bg-color);
 }
 
+/* Main Section */
 main {
     display: flex;
     justify-content: space-between;
@@ -94,7 +150,6 @@ main {
 .content {
     flex: 3;
     padding-right: 2rem;
-    
 }
 
 .trending-latest-container {
@@ -102,7 +157,6 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-   
 }
 
 .content h2 {
@@ -111,7 +165,7 @@ main {
 }
 
 .content article {
-    background: rgba(255, 255, 255, 0.8);
+    background: var(--article-bg-color);
     padding: 1rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
@@ -138,9 +192,10 @@ main {
     line-height: 1.6;
 }
 
+/* Trending and Latest News Sections */
 .trending,
 .latest-news {
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    background: var(--section-bg-color);
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -191,7 +246,7 @@ main {
 .trending ul a,
 .latest-news ul a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--section-text-color);
     font-weight: 600;
     font-size: 1.2rem;
     transition: color 0.3s;
@@ -226,7 +281,7 @@ main {
 }
 
 .video-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--article-bg-color);
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1.5rem;
@@ -252,44 +307,34 @@ video-item iframe {
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 2rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-#advertise-container:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+#advertise-container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
 }
 
+#advertise-container p {
+    font-size: 1rem;
+    color: var(--section-text-color);
+}
+
+/* Footer Styles */
 footer {
-    background-color: var(--accent-color);
-    color: var(--btn-text-color);
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
+    padding: 1rem;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
 footer p {
     margin: 0;
     font-size: 1rem;
-}
-
-.btn {
-    background-color: var(--btn-bg-color);
-    color: var(--btn-text-color);
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1rem;
     font-weight: 600;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.btn:hover {
-    background-color: var(--btn-hover-bg-color);
-    transform: scale(1.05);
 }
