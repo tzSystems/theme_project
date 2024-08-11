@@ -88,25 +88,27 @@ main {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    gap: 2rem;
 }
 
 .content {
     flex: 3;
     padding-right: 2rem;
-    width:60% !important
+    width: 60% !important;
 }
 
-.trending {
-    width: 36%
+.trending-latest-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 36%;
 }
 
 .content h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
-
-
-
 
 .content article {
     background: rgba(255, 255, 255, 0.8);
@@ -136,52 +138,79 @@ main {
     line-height: 1.6;
 }
 
-#trending {
-    display: flex;
-    gap: 2rem;
-    padding:2rem;
+.trending,
+.latest-news {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
-aside {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
+.trending h3,
+.latest-news h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-aside h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-aside ul {
+.trending ul,
+.latest-news ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-aside ul li {
-    margin-bottom: 0.5rem;
+.trending ul li,
+.latest-news ul li {
     display: flex;
     align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
 }
 
-aside ul img {
-    width: 50px;
-    height: 50px;
+.trending ul li:last-child,
+.latest-news ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.trending ul img,
+.latest-news ul img {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    transition: transform 0.3s;
 }
 
-aside ul a {
+.trending ul a,
+.latest-news ul a {
     text-decoration: none;
     color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.2rem;
     transition: color 0.3s;
 }
 
-aside ul a:hover {
+.trending ul a:hover,
+.latest-news ul a:hover {
     color: var(--accent-color);
+}
+
+.trending ul li:hover img,
+.latest-news ul li:hover img {
+    transform: scale(1.1);
+}
+
+.trending:hover,
+.latest-news:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 footer {
