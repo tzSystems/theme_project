@@ -94,7 +94,7 @@ main {
 .content {
     flex: 3;
     padding-right: 2rem;
-    width: 60% !important;
+    
 }
 
 .trending-latest-container {
@@ -102,7 +102,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    width: 36%;
+   
 }
 
 .content h2 {
@@ -209,6 +209,57 @@ main {
 
 .trending:hover,
 .latest-news:hover {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Video Section Styling */
+.videos {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#video-container {
+    flex: 3;
+}
+
+.video-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.video-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+video-item iframe {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Right Side Advertise Container */
+#advertise-container {
+    flex: 1;
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+#advertise-container:hover {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
