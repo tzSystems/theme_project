@@ -11,17 +11,20 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Tanzanian Football News</h1>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="logo.png" alt="Tanzanian Football News Logo">
+            </div>
+            <h1 class="site-title">Tanzanian Football News</h1>
             <button id="theme-toggle" class="btn">Toggle Theme</button>
         </div>
-        <nav>
+        <nav class="navbar">
             <ul class="nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Matches</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">News</a></li>
+                <li><a href="#" class="nav-link">Matches</a></li>
+                <li><a href="#" class="nav-link">Teams</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,7 +32,7 @@
     <main class="container">
         <section class="content">
             <h2>Latest News</h2>
-            <article>
+            <article >
                 <img src="./images/simba-wins.jpg" alt="Simba SC Wins the League">
                 <h3>Simba SC Wins the League</h3>
                 <p>Simba SC has won the Tanzanian Premier League after a thrilling match...</p>
@@ -46,9 +49,9 @@
             </article>
         </section>
         
-        <aside>
+        <aside class="trending">
             <h3>Trending Topics</h3>
-            <ul>
+            <ul ">
                 <li><a href="#"><img src="./images/prince-dube.jpg" alt="Top Scorers"> Top Scorers of the Season</a></li>
                 <li><a href="#"><img src="./images/fixtures.jpg" alt="Upcoming Matches"> Upcoming Matches</a></li>
                 <li><a href="#"><img src="player-interviews.jpg" alt="Player Interviews"> Player Interviews</a></li>
@@ -60,7 +63,7 @@
        
     <section class="videos">
         <h2>Video Highlights</h2>
-        <div class="video-grid">
+        <div id="trending">
             <div class="video-item">
                 <h3>Match Highlights: Simba SC vs Young Africans</h3>
                 <iframe src="https://www.youtube.com/embed/example1" frameborder="0" allowfullscreen></iframe>
@@ -69,14 +72,7 @@
                 <h3>Exclusive Interview with the Coach</h3>
                 <iframe src="https://www.youtube.com/embed/example2" frameborder="0" allowfullscreen></iframe>
             </div>
-            <div class="video-item">
-                <h3>Top Goals of the Season</h3>
-                <iframe src="https://www.youtube.com/embed/example3" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-item">
-                <h3>Fan Reactions: Latest Match</h3>
-                <iframe src="https://www.youtube.com/embed/example4" frameborder="0" allowfullscreen></iframe>
-            </div>
+           
         </div>
     </section>
     <footer>
