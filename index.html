@@ -13,9 +13,10 @@
     <header class="header-minimal">
         <div class="header-container">
             <div class="logo">
-                <img src="./images/logo.png" alt="Logo ya Habari za Soka la Tanzania">
+                <img id="logo-image" src="./images/white-logo3.png" alt="Logo ya Habari za Soka la Tanzania" />
             </div>
-            <nav class="navbar">
+           
+            <nav id="navbar" class="navbar">
                 <ul class="nav-list">
                     <li><a href="#" class="nav-link">Nyumbani</a></li>
                     <li><a href="#" class="nav-link">Habari</a></li>
@@ -24,10 +25,13 @@
                     <li><a href="#" class="nav-link">Mawasiliano</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="btn btn-theme-toggle">Theme</button>
+            <button id="theme-toggle" class="theme-toggle">Theme</button>
+            
+            <button id="menu-toggle" class="menu-toggle">
+                <span class="menu-icon">&#9776;</span>
+            </button>
         </div>
     </header>
-    
     
     <main class="container">
         <section class="content">
@@ -49,7 +53,6 @@
             </article>
         </section>
         
-        <!-- Kontena ya Sidebar kwa Mada Zinazovuma na Habari za Hivi Punde -->
         <aside class="sidebar">
             <div class="trending">
                 <h3>Mada Zinazovuma</h3>
@@ -91,7 +94,6 @@
         </aside>
     </main>
     
-    <!-- Kontena ya Video na Matangazo -->
     <section class="video-ad-container">
         <div class="videos">
             <div>
@@ -100,22 +102,18 @@
                     <div class="video-item">
                         <h3> Azam Fc 1 - 4 Young Africans</h3>
                         <iframe width="360" height="240" src="https://www.youtube.com/embed/l30skWGJYH4" title="HIGHLIGHTS: YANGA 4 - 1 AZAM FC/ BOKA NA DUBE WALIVYOIBEBA SHOO NZIMA KIBABE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        
                     </div>
                     <div class="video-item">
                         <h3>Mahojiano Maalum na Kocha</h3>
                         <iframe width="360" height="240" src="https://www.youtube.com/embed/NOXXOOCYsD8" title="KOCHA FADLU DAVIDS: &quot;USHINDANI NI MKUBWA NDANI YA KIKOSI/MAENDELEO HAPA  NI MAZURI SANA&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
-
                     <div class="video-item">
                         <h3>Sakata la Kagoma bado kizungumkuti</h3>
                         <iframe width="360" height="240" src="https://www.youtube.com/embed/lHi3h8EFclc" title="#EXCLUSIVE NA YUSUPH KAGOMA/NI KWELI ALIKATAA OFA YA MTANI?/ALISANI MIKATABA MIWILI?/AFUNGUKA A-Z" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-          
         </div>
-       
     </section>
     
     <footer>
