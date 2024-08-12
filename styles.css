@@ -4,7 +4,7 @@
     --header-background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 245, 0.7) 100%);
     --header-border: rgba(0, 0, 0, 0.1);
     --nav-link-color: #2c3e50;
-    --nav-link-bg: rgba(255, 255, 255, 0.6);
+    --nav-link-bg: rgba(255, 255, 255, 0.4);
     --nav-link-hover-bg: #2c3e50;
     --btn-theme-bg: #ffffff;
     --btn-theme-color: #2c3e50;
@@ -22,7 +22,7 @@
     --header-background: linear-gradient(135deg, rgba(33, 33, 33, 0.8) 0%, rgba(48, 48, 48, 0.6) 100%);
     --header-border: rgba(255, 255, 255, 0.2);
     --nav-link-color: #ffffff;
-    --nav-link-bg: rgba(33, 33, 33, 0.7);
+    --nav-link-bg: rgba(33, 33, 33, 0.4);
     --nav-link-hover-bg: #ffffff;
     --btn-theme-bg: #333333;
     --btn-theme-color: #ffffff;
@@ -66,6 +66,7 @@ h2, h3, p {
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -75,6 +76,7 @@ h2, h3, p {
 
 .header-container {
     display: flex;
+    gap:2rem;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
@@ -95,7 +97,9 @@ h2, h3, p {
 }
 
 .navbar .nav-list {
+    margin-left:auto;
     display: flex;
+    gap:4px;
     list-style: none;
     padding: 0;
     margin: 0;
